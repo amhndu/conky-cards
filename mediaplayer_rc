@@ -1,0 +1,49 @@
+background no
+font sans:size=10
+#xftfont sans:size=10
+use_xft yes
+xftalpha 0.9
+update_interval 2
+total_run_times 0
+own_window yes
+own_window_type normal
+#own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_argb_visual true
+#own_window_argb_value 50
+own_window_colour fafafa
+double_buffer yes
+minimum_size 225 120
+#maximum_size 220
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+default_color 101010
+default_shade_color 101010
+alignment top_left
+gap_x 320#40
+gap_y 510
+no_buffers yes
+cpu_avg_samples 1
+uppercase no
+border_inner_margin 15
+default_bar_size 144 6
+
+#colors
+color1 ff5050
+color2 slategray
+color3 101010
+
+TEXT
+${color1}${font Oswald:size=10:bold}MEDIA PLAYER ${color2} ${hr 2}
+${if_match "${execi 10 python3 INSERT_PATH/mediaplayer.py clementine -i}"=="yes"}
+${color3}${font Open Sans:size=9}${execpi 4 python3 INSERT_PATH/mediaplayer.py clementine -tamlr -w 45}
+${if_match "${execi 4 python3 INSERT_PATH/mediaplayer.py clementine -p}"=="Unknown"}\
+Progress: ${alignr}Unknown
+${else}\
+Progress:${alignr}${color1}${execibar 4  python3 INSERT_PATH/mediaplayer.py clementine -p}
+${endif}\
+${else}
+${color3}${font Open Sans:size=9}Not Running\
+${endif}
