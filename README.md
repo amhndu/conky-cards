@@ -11,6 +11,11 @@ This conky setup consists of eight individual conky scripts ("cards") which disp
 * Network usage
 * Metadata of the current track playing
 
+Screenshots
+===========
+
+![Screenshot 1](screenshots/screenshot1.jpg)
+![Screenshot 2](screenshots/screenshot2.jpg)
 
 Installation
 ===========
