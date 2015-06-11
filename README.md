@@ -52,9 +52,9 @@ $ sed -i 's/usb0/eth0/' network_rc
 
 **Media Player**
 
-Replace `clementine` in `mediaplayer_rc` with your media player. This should probably work just fine after replacement if the media player you are using implements MPRIS 2.0 (most players do).
+Replace `clementine` in `mediaplayer_rc` with the name of your media player (e.g. `vlc`, or `audacious`, or `amarok`).  
+This should probably just work (after replacement) if the media player you are using implements MPRIS 2.0 (most players do).
 To customize the output, you might want to see `python3 mediaplayer.py --help`
-e.g. replace it with `vlc`, or `audacious`, or `xmms2`, or `amarok`
 
 **Fortune**
 
