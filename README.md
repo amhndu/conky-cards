@@ -96,4 +96,4 @@ Substitue them using sed like above.
 
 Author
 ========
-Amish Naiud  http://amhndu.github.io
+Amish Naidu  http://amhndu.github.io
