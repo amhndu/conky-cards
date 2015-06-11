@@ -25,8 +25,8 @@ Installation
 Install `conky` , preferably the package `conky-all` if in the future you want to use some exotic features  
 For the mediaplayer "card", you need `python3`  
 For the fortune "card", you need `fortune`  
-The script uses the following fonts, which are included in the repository/download, install them
-(see Customization if you want to use your fonts)
+The script uses the following fonts, install them
+(see Customization if you wish to use your fonts)
 * Antipasto [Download here](http://www.dafont.com/antipasto.font)
 * Open Sans [Download here](http://www.fontsquirrel.com/fonts/open-sans)
 * Oswald [Download here](http://www.fontsquirrel.com/fonts/oswald)
@@ -37,7 +37,7 @@ $ cd /home/foo/path/to/my/dir
 $ sed -i 's:INSERT_PATH:/home/foo/path/to/my/dir:' mediaplayer_rc launch_all.sh
 ```
 
-Now, set `launch_all.sh` as executable (`sudo chmod u+x launch_all.sh`) and add it to startup applications. If you don't know how, Google is your friend.
+Now, set `launch_all.sh` as executable (`sudo chmod u+x launch_all.sh`) and add it to your startup applications. If you don't know how, Google is your friend.
 
 
 Customization
@@ -45,7 +45,7 @@ Customization
 
 **Network**
 
-You might want to replace `usb0` in `network_rc` with the device you are connected to the internet like `eth0` or `ppp0`  e.g.
+You might want to replace `usb0` in `network_rc` with the device you are connected to the internet with (like `eth0` or `ppp0`)  e.g.
 ```
 $ sed -i 's/usb0/eth0/' network_rc
 ```
@@ -54,6 +54,7 @@ $ sed -i 's/usb0/eth0/' network_rc
 
 Replace `clementine` in `mediaplayer_rc` with your media player. This should probably work just fine after replacement if the media player you are using implements MPRIS 2.0 (most players do).
 To customize the output, you might want to see `python3 mediaplayer.py --help`
+e.g. replace it with `vlc`, or `audacious`, or `xmms2`, or `amarok`
 
 **Fortune**
 
@@ -69,16 +70,16 @@ Color of the Card heading
 Color of the horizontal line stretching from the heading to the right end
 * color3 (color)  
 Text color  
-Here, (color) can be specified using the hexadecimal notation (without the preceding #) or a string from `/usr/share/X11/rgb.txt`  
+Here, (color) can be specified using the hexadecimal notation (without the preceding #) or a color name specified in `/usr/share/X11/rgb.txt`  
 Examples of legit colors : red, blue, 20efef  
-You can change any of the above colors to suit you liking/theme
+You can change any of the above colors to suit your liking/theme
 Examples:  
 If you want headings in blue, then run  
 ```
 $ sed -i -r 's/color1 [a-z0-9]+$/color1 0000ff/' *_rc
 
-#(the [a-z0-9] also matches color names besides the hexadecimal colors)
 ```
+(the [a-z0-9] in the above pattern also matches color names besides the hexadecimal colors)
 
 Similarly, you can change the background color of the 'cards' specified by the variable `own_window_colour (color)`
 For transparency, uncomment the lines `#own_window_transparent yes` (by removing the #).  
