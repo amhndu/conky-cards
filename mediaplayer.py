@@ -71,8 +71,8 @@ Please report any bugs.
     parser.add_argument('-n', '--track', action='store_true', help='track number')
     parser.add_argument('-c', '--cover',  help='Make a (soft) symlink at the specified location to the album art')
     parser.add_argument('--cover_default', help='If the the album art could not be found from the player, make a link to this')
-    parser.add_argument('--action', action='store', help='make the player perform an action',
-            choices=['next', 'prev', 'pause', 'play'])
+    parser.add_argument('--action', action='store', help='make the player perform an action : next, prev, play, pause, volume up/down by 0.1',
+            choices=['next', 'prev', 'pause', 'play', 'playpause', 'volup', 'voldown'])
     args = parser.parse_args()
 
     try:
@@ -140,5 +140,13 @@ Please report any bugs.
                     interface.Pause()
                 elif args.action == 'play':
                     interface.Play()
+                elif args.action == 'playpause':
+                    interface.PlayPause()
+                elif args.action == 'volup' or args.action == 'voldown':
+                    volume = player.Get('org.mpris.MediaPlayer2.Player', 'Volume',
+                        dbus_interface='org.freedesktop.DBus.Properties')
+                    volume += 0.1 if args.action == 'volup' else -0.1
+                    player.Set('org.mpris.MediaPlayer2.Player', 'Volume', volume,
+                            dbus_interface='org.freedesktop.DBus.Properties')
             except:
                 pass
