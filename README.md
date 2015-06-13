@@ -37,7 +37,7 @@ $ cd /home/foo/path/to/my/dir
 $ sed -i 's:INSERT_PATH:/home/foo/path/to/my/dir:' mediaplayer_rc launch_all.sh
 ```
 
-Now, set `launch_all.sh` as executable (`sudo chmod u+x launch_all.sh`) and add it to your startup applications. If you don't know how, Google is your friend.
+Now, set `launch_all.sh` as executable (`chmod u+x launch_all.sh`) and add it to your startup applications. If you don't know how, Google is your friend.
 
 
 Customization
