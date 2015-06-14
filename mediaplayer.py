@@ -135,7 +135,7 @@ Please report any bugs.
                 if args.action == 'next':
                     interface.Next()
                 elif args.action == 'prev':
-                    interface.Prev()
+                    interface.Previous()
                 elif args.action == 'pause':
                     interface.Pause()
                 elif args.action == 'play':
