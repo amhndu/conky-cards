@@ -7,15 +7,15 @@ update_interval 2
 imlib_cache_size 0
 total_run_times 0
 own_window yes
-own_window_type normal
+own_window_type dock
 #own_window_transparent yes
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 own_window_argb_visual true
-#own_window_argb_value 50
-own_window_colour fafafa
+own_window_argb_value 180
+own_window_colour 224466
 double_buffer yes
-minimum_size 500 114
-maximum_size 500 114
+minimum_size 500 100
+maximum_size 500 100
 draw_shades no
 draw_outline no
 draw_borders no
@@ -32,11 +32,11 @@ uppercase no
 border_inner_margin 15
 
 #colors
-color1 ff5050
-color2 slategray
-color3 101010
+color1 96A0DF
+color2 aaa
+color3 ddd
 
 TEXT
 ${color1}${font Oswald:size=10:bold}FORTUNE ${color2} ${hr 2}
 
-${color3}${font Open Sans:size=10}${execi 100 fortune -s science computers wisdom | fmt -w 90}
+${color3}${font Open Sans:size=10}${execi 100 fortune -s -n 120 wisdom linux computers science | fmt -w 90}
