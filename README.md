@@ -14,6 +14,7 @@ This conky setup consists of eight individual conky scripts ("cards") which disp
 Screenshots
 ===========
 
+![Screenshot 0](https://i.imgur.com/9eBtSKl.png)
 ![Screenshot 1](screenshots/screenshot1.jpg)
 ![Screenshot 2](screenshots/screenshot2.jpg)
 
