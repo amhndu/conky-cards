@@ -50,9 +50,9 @@ Customization
 
 **Network**
 
-You might want to replace `usb0` in `network_rc` with the device you are connected to the internet with (like `eth0` or `ppp0`)  e.g.
+You might want to replace `enp0s20u1` or `wlp3s0` in `network_rc` with the device you are connected to the internet with  e.g.
 ```
-$ sed -i 's/usb0/eth0/' network_rc
+$ sed -i 's/enp0s20u1/enp0s20u3/' network_rc
 ```
 
 **Media Player**
