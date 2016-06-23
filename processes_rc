@@ -39,10 +39,11 @@ ${color1}${font Oswald:size=10:bold}PROCESSES ${color2} ${hr 2}
 ${color3}${font Open Sans:size=9}
 CPU Clock Speed: ${alignr}${freq_g} GHz
 Total Processes: ${alignr}$processes ($running_processes running)
-${color3}CPU0: ${cpu cpu0}% ${alignr}${color1}${cpubar cpu0 6,140}
+${color3}CPU : ${cpu cpu0}% ${alignr}${color1}${cpubar cpu0 6,140}
 ${color3}CPU1: ${cpu cpu1}% ${alignr}${color1}${cpubar cpu1 6,140}
 ${color3}CPU2: ${cpu cpu2}% ${alignr}${color1}${cpubar cpu2 6,140}
 ${color3}CPU3: ${cpu cpu3}% ${alignr}${color1}${cpubar cpu3 6,140}
+${color3}CPU4: ${cpu cpu3}% ${alignr}${color1}${cpubar cpu4 6,140}
 
 ${color3}Top Processes:
 ${font Open Sans:pixelsize=9}Name: $alignr PID   CPU   MEM  

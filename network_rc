@@ -28,6 +28,7 @@ no_buffers yes
 cpu_avg_samples 1
 uppercase no
 border_inner_margin 15
+if_up_strictness link
 
 #colors
 color1 96A0DF
@@ -40,9 +41,8 @@ ${if_up wlp3s0}
 ${color3}${font Open Sans:size=9}Down: ${downspeed wlp3s0}/s ${alignr}Up: ${upspeed wlp3s0} /s
 ${color1}${color1}${downspeedgraph wlp3s0 20,90 444444 eeeeee} ${alignr}${color1}${upspeedgraph wlp3s0 20,90 444444 eeeeee}
 ${color3}  Total: ${totaldown wlp3s0} ${alignr}Total: ${totalup wlp3s0}
-#${else}
-#${if_up enp0s20u1}
-#${color3}${font Open Sans:size=9}Down: ${downspeed enp0s20u1}/s ${alignr}Up: ${upspeed enp0s20u1} /s
-#${color1}${color1}${downspeedgraph enp0s20u1 20,90 444444 eeeeee} ${alignr}${color1}${upspeedgraph enp0s20u1 20,90 444444 eeeeee}
-#{$color3}  Total: ${totaldown enp0s20u1} ${alignr}Total: ${totalup enp0s20u1}
+${else}${if_up enp0s20u1}
+${color3}${font Open Sans:size=9}Down: ${downspeed enp0s20u1}/s ${alignr}Up: ${upspeed enp0s20u1} /s
+${color1}${color1}${downspeedgraph enp0s20u1 20,90 444444 eeeeee} ${alignr}${color1}${upspeedgraph enp0s20u1 20,90 444444 eeeeee}
+${color3}  Total: ${totaldown enp0s20u1} ${alignr}Total: ${totalup enp0s20u1}
 ${endif}

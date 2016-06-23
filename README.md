@@ -38,6 +38,10 @@ $ sed -i 's:INSERT_PATH:/home/foo/path/to/my/dir:' mediaplayer_rc launch_all.sh
 ```
 
 Now, set `launch_all.sh` as executable (`chmod u+x launch_all.sh`) and add it to your startup applications. If you don't know how, Google is your friend.
+If **after** 10-15 seconds, you don't see conky on your desktop, try running:
+```
+sed -i -r 's/own_window_type .*/own_window_type normal/' *_rc
+```
 
 
 Customization

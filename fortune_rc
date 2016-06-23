@@ -14,8 +14,8 @@ own_window_argb_visual true
 own_window_argb_value 180
 own_window_colour 224466
 double_buffer yes
-minimum_size 500 100
-maximum_size 500 100
+minimum_size 700 100
+maximum_size 700 100
 draw_shades no
 draw_outline no
 draw_borders no
@@ -39,4 +39,4 @@ color3 ddd
 TEXT
 ${color1}${font Oswald:size=10:bold}FORTUNE ${color2} ${hr 2}
 
-${color3}${font Open Sans:size=10}${execi 100 fortune -s -n 120 wisdom linux computers science | fmt -w 90}
+${color3}${font Open Sans:size=10}${execi 100 fortune -s -n 120 wisdom linux computers science | fmt -w 160}
