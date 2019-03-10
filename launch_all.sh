@@ -1,5 +1,5 @@
 #!/bin/bash
-sleep 10
+#sleep 10
 conky -dq -c INSERT_PATH/time_rc
 conky -dq -c INSERT_PATH/system_rc
 conky -dq -c INSERT_PATH/processes_rc
