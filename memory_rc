@@ -1,45 +1,48 @@
-background no
-font sans:size=10
-#xftfont sans:size=10
-use_xft yes
-xftalpha 0.9
-update_interval 2
-imlib_cache_size 0
-total_run_times 0
-own_window yes
-own_window_type dock
-#own_window_transparent yes
-own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-own_window_argb_visual true
-own_window_argb_value 180
-own_window_colour 224466
-double_buffer yes
-minimum_size 225
-draw_shades no
-draw_outline no
-draw_borders no
-draw_graph_borders yes
-default_color 101010
-default_shade_color 101010
-default_outline_color green
-alignment top_left
-gap_x 600
-gap_y 200
-no_buffers yes
-cpu_avg_samples 1
-uppercase no
-border_inner_margin 15
+conky.config = {
+	background = false,
+	font = 'sans:size=10',
+--xftfont sans:size=10
+	use_xft = true,
+	xftalpha = 0.9,
+	update_interval = 2,
+	imlib_cache_size = 0,
+	total_run_times = 0,
+	own_window = true,
+	own_window_type = 'dock',
+--own_window_transparent yes
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_argb_visual = true,
+	own_window_argb_value = 180,
+	own_window_colour = '#224466',
+	double_buffer = true,
+	minimum_width = 225,
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = true,
+	default_color = '#101010',
+	default_shade_color = '#101010',
+	default_outline_color = 'green',
+	alignment = 'top_left',
+	gap_x = 600,
+	gap_y = 200,
+	no_buffers = true,
+	cpu_avg_samples = 1,
+	uppercase = false,
+	border_inner_margin = 15,
 
-#colors
-color1 96A0DF
-color2 aaa
-color3 ddd
+--colors
+	color1 = '#96A0DF',
+	color2 = '#aaa',
+	color3 = '#ddd',
 
-TEXT
+};
+
+conky.text = [[
 ${color1}${font Oswald:size=10:bold}MEMORY ${color2} ${hr 2}
 
 ${color3}${font Open Sans:size=9}Ram: ${memperc}% ${alignr}${color1}${membar 5,140}
 ${color3}${font Open Sans:pixelsize=9}${alignc 49}${mem} / ${memmax}
 ${color3}${font Open Sans:size=9}Top process: ${alignr}${top_mem name 1} : ${top_mem mem 1}
 ${color3}${font Open Sans:size=9}Swap: ${swapperc}% ${alignr}${color1}${swapbar 5,140}
-${color3}${font Open Sans:pixelsize=9}${alignc 49}${swap} / ${swapmax}
+${color3}${font Open Sans:pixelsize=9}${alignc 49}${swap} / ${swapmax}]];

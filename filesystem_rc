@@ -1,44 +1,47 @@
-background no
-font sans:size=10
-#xftfont sans:size=10
-use_xft yes
-xftalpha 0.9
-update_interval 2
-imlib_cache_size 0
-total_run_times 0
-own_window yes
-own_window_type dock
-#own_window_transparent yes
-own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-own_window_argb_visual true
-own_window_argb_value 180
-own_window_colour 224466
-double_buffer yes
-minimum_size 225
-draw_shades no
-draw_outline no
-draw_borders no
-draw_graph_borders yes
-default_color 101010
-default_shade_color 101010
-default_outline_color green
-alignment top_left
-gap_x 320#40
-gap_y 200#40
-no_buffers yes
-cpu_avg_samples 1
-uppercase no
-border_inner_margin 15
+conky.config = {
+	background = false,
+	font = 'sans:size=10',
+--xftfont sans:size=10
+	use_xft = true,
+	xftalpha = 0.9,
+	update_interval = 2,
+	imlib_cache_size = 0,
+	total_run_times = 0,
+	own_window = true,
+	own_window_type = 'dock',
+--own_window_transparent yes
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_argb_visual = true,
+	own_window_argb_value = 180,
+	own_window_colour = '#224466',
+	double_buffer = true,
+	minimum_width = 225,
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = true,
+	default_color = '#101010',
+	default_shade_color = '#101010',
+	default_outline_color = 'green',
+	alignment = 'top_left',
+	gap_x = 320,--40
+	gap_y = 200,--40
+	no_buffers = true,
+	cpu_avg_samples = 1,
+	uppercase = false,
+	border_inner_margin = 15,
 
-#colors
-color1 96A0DF
-color2 aaa
-color3 ddd
+--colors
+	color1 = '#96A0DF',
+	color2 = '#aaa',
+	color3 = '#ddd',
 
-TEXT
+};
+
+conky.text = [[
 ${font Oswald:bold:size=10}${color1}FILESYSTEM ${color2} ${hr 2}
 
 ${color3}${font Open Sans:size=9}Root: ${alignr}${fs_used_perc /}%  ${color1}${fs_bar 6, 140 /} 
 ${color3}${font Open Sans:pixelsize=9}${alignc 49}Size: ${fs_used /} / ${fs_size /}
 ${color3}${font Open Sans:size=9}Home: ${alignr}${fs_used_perc /home}%  ${color1}${fs_bar 6, 140 /home} 
-${color3}${font Open Sans:pixelsize=9}${alignc 49}Size: ${fs_used /home} / ${fs_size /home}
+${color3}${font Open Sans:pixelsize=9}${alignc 49}Size: ${fs_used /home} / ${fs_size /home}]];

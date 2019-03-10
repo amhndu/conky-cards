@@ -1,40 +1,43 @@
-background no
-font sans:size=10
-#xftfont sans:size=10
-use_xft yes
-xftalpha 0.9
-update_interval 2
-imlib_cache_size 0
-total_run_times 0
-own_window yes
-own_window_type dock
-#own_window_transparent yes
-own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-own_window_argb_visual true
-own_window_argb_value 180
-own_window_colour 224466
-double_buffer yes
-minimum_size 225
-draw_shades no
-draw_outline no
-draw_borders no
-draw_graph_borders yes
-default_color 101010
-default_shade_color 101010
-alignment top_left
-gap_x 320
-gap_y 350
-no_buffers yes
-cpu_avg_samples 1
-uppercase no
-border_inner_margin 15
+conky.config = {
+	background = false,
+	font = 'sans:size=10',
+--xftfont sans:size=10
+	use_xft = true,
+	xftalpha = 0.9,
+	update_interval = 2,
+	imlib_cache_size = 0,
+	total_run_times = 0,
+	own_window = true,
+	own_window_type = 'dock',
+--own_window_transparent yes
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_argb_visual = true,
+	own_window_argb_value = 180,
+	own_window_colour = '#224466',
+	double_buffer = true,
+	minimum_width = 225,
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = true,
+	default_color = '#101010',
+	default_shade_color = '#101010',
+	alignment = 'top_left',
+	gap_x = 320,
+	gap_y = 350,
+	no_buffers = true,
+	cpu_avg_samples = 1,
+	uppercase = false,
+	border_inner_margin = 15,
 
-#colors
-color1 96A0DF
-color2 aaa
-color3 ddd
+--colors
+	color1 = '#96A0DF',
+	color2 = '#aaa',
+	color3 = '#ddd',
 
-TEXT
+};
+
+conky.text = [[
 ${color1}${font Oswald:size=10:bold}PROCESSES ${color2} ${hr 2}
 ${color3}${font Open Sans:size=9}
 CPU Clock Speed: ${alignr}${freq_g} GHz
@@ -52,3 +55,4 @@ ${font Open Sans:pixelsize=9}Name: $alignr PID   CPU   MEM
   ${top name 3} $alignr ${top pid 3}  ${top cpu 3}  ${top mem 3}  
   ${top name 4} $alignr ${top pid 4}  ${top cpu 4}  ${top mem 4}  
   ${top name 5} $alignr ${top pid 5}  ${top cpu 5}  ${top mem 5}  
+]];

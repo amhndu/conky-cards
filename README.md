@@ -21,7 +21,7 @@ Screenshots
 Installation
 ===========
 
-####Requirements####
+#### Requirements
 
 Install `conky` , preferably the package `conky-all` if in the future you want to use some exotic features  
 For the mediaplayer "card", you need `python3`  
@@ -38,8 +38,11 @@ $ cd /home/foo/path/to/my/dir
 $ sed -i 's:INSERT_PATH:/home/foo/path/to/my/dir:' mediaplayer_rc launch_all.sh
 ```
 
-Now, set `launch_all.sh` as executable (`chmod u+x launch_all.sh`) and add it to your startup applications. If you don't know how, Google is your friend.
-If **after** 10-15 seconds, you don't see conky on your desktop, try running:
+Now, set `launch_all.sh` as executable (`chmod u+x launch_all.sh`) and run it. If you're on Plasma, that's it.
+
+Otherwise, on other platforms you might have to uncomment the sleep line in that script and add the script to your startup applications.
+If you don't know how, Google is your friend.
+For non-plasma systems, if **after** 10-15 seconds, you don't see conky on your desktop, try running:
 ```
 sed -i -r 's/own_window_type .*/own_window_type normal/' *_rc
 ```
@@ -50,14 +53,14 @@ Customization
 
 **Network**
 
-You might want to replace `usb0` in `network_rc` with the device you are connected to the internet with (like `eth0` or `ppp0`)  e.g.
+You might want to replace `enp0s20u1` in `network_rc` with the device you are connected to the internet with similarly for the wifi device e.g.
 ```
-$ sed -i 's/usb0/eth0/' network_rc
+$ sed -i 's/enp0s20u1/enp0s30u1/' network_rc
 ```
 
 **Media Player**
 
-Replace `clementine` in `mediaplayer_rc` with the name of your media player (e.g. `vlc`, or `audacious`, or `amarok`).  
+Replace `clementine` in `mediaplayer_rc` with the name of your media player (e.g. `vlc`, or `audacious`, or `spotify`).  
 This should probably just work (after replacement) if the media player you are using implements MPRIS 2.0 (most players do).
 To customize the output, you might want to see `python3 mediaplayer.py --help`
 
@@ -81,13 +84,11 @@ You can change any of the above colors to suit your liking/theme
 Examples:  
 If you want headings in blue, then run  
 ```
-$ sed -i -r 's/color1 [a-z0-9]+$/color1 0000ff/' *_rc
+$ sed -i -r "s/color1 = '.*'$/color1 = '#0000ff'/" *_rc
 
 ```
-(the [a-z0-9] in the above pattern also matches color names besides the hexadecimal colors)
 
-Similarly, you can change the background color of the 'cards' specified by the variable `own_window_colour (color)`
-For transparency, uncomment the lines `#own_window_transparent yes` (by removing the #).  
+Similarly, you can change the background color of the 'cards' specified by the variable `own_window_colour`
 Background opacity is specified by `own_window_argb_value (value between 0 and 255)`
 
 
