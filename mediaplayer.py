@@ -23,7 +23,7 @@ def fmt_field(left, right, conky_alignr, width):
 #Return a string containing time in HH:MM:SS format from microseconds
 def fmt_time(microseconds):
     seconds = microseconds/1000000
-    return '{:02}:{:02}:{:02}'.format(int(seconds//360), int((seconds%360)//60), int(seconds%60))
+    return '{:02}:{:02}:{:02}'.format(int(seconds//3600), int((seconds%3600)//60), int(seconds%60))
 
 if __name__ == '__main__':
 
