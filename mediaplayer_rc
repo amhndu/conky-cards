@@ -42,7 +42,7 @@ conky.text = [[
 ${color1}${font Oswald:size=10:bold}MEDIA PLAYER ${color2} ${hr 2}
 ${if_match "${execi 10 python3 INSERT_PATH/conky-cards/mediaplayer.py clementine -i}"=="yes"}
 ${color3}${font Anitpasto:size=9}${execpi 4 python3 INSERT_PATH/conky-cards/mediaplayer.py clementine -tamlr -w 45}
-${if_match "${execi 4 python3 INSERT_PATH/mediaplayer.py clementine -p}"=="Unknown"}\
+${if_match "${execi 4 python3 INSERT_PATH/conky-cards/mediaplayer.py -p}"=="Unknown"}\
 Progress: ${alignr}Unknown
 ${else}\
 Progress:${alignr}${color1}${execibar 4  python3 INSERT_PATH/conky-cards/mediaplayer.py clementine -p}
