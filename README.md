@@ -84,7 +84,7 @@ You can change any of the above colors to suit your liking/theme
 Examples:  
 If you want headings in blue, then run  
 ```
-$ sed -i -r "s/color1 = '.*'$/color1 = '#0000ff'/" *_rc
+$ sed -i -r "s/color1 = '.*',$/color1 = '#0000ff',/" *_rc
 
 ```
 
